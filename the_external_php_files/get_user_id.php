@@ -1,11 +1,10 @@
-
 <?php
     $filename = "users.json";
     if(file_exists($filename)){
         $users = json_decode(file_get_contents($filename), true);
-        if($_SERVER["REQUEST_METHOD"] === "GET"){
-            
-            if($_GET["id"] !== ""){       
+        
+        if($_SERVER["REQUEST_METHOD"] === "GET"){   
+            if(array_key_exists("id", $_GET)){
                 foreach($users as $user){
                     if($user["id"] == $_GET["id"]){
                         header("Content-Type: application/json");
@@ -17,18 +16,9 @@
                     }
                 }
             }
-            else{
-                echo "NEIN";
-                exit();
-            }
         }
-        else{
-            echo "Wrong request format only execept GET req"; 
-            exit();
-        }
-    }
-    else{
-        echo "file does not exits";
-        exit();
+            
     }
 ?>
+
+
