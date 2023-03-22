@@ -12,8 +12,8 @@
     <ol>
         <li>En användare baserat på deras ID, t.ex. <a href="/api.php?id=5">api.php?id=5</a></li>
         <li>Alla användare under en ålder, t.ex. <a href="/api.php?belowAge=30">api.php?belowAge=30</a></li>
-        <li>Alla användare som "känner" en viss användare, t.ex. <a href="/solution/api.php?knows=4">api.php?knows=4</a></li>
-        <li>En list över alla användares email, <a href="/sapi.php?email=export">api.php?email=export</a></li>
+        <li>Alla användare som "känner" en viss användare, t.ex. <a href="/api.php?knows=4">api.php?knows=4</a></li>
+        <li>En list över alla användares email, <a href="/api.php?email=export">api.php?email=export</a></li>
         <li>Alla användare vars för- och/eller efternamn innehåller <i>XYZ</i>, t.ex. <a href="/api.php?search=liv">api.php?search=liv</a>, tips: <code>str_contains()</code></li>
     </ol>
 </body>
