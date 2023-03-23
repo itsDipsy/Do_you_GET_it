@@ -7,7 +7,9 @@
                 
                     $data_for_emails_json = [];
                     foreach($users as $user){
-                        if($_GET["search"] === $user["first_name"]){
+                        if(str_contains(strtolower($user["first_name"]), strtolower($_GET["search"])) or
+                        str_contains(strtolower($user["last_name"]), strtolower($_GET["search"]))) 
+                        {
                             $data_for_emails_json[] = $user;
                         }
                     }
